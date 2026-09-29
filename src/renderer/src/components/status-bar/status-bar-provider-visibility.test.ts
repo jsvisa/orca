@@ -550,7 +550,8 @@ describe('isUsageEmptyState', () => {
       minimax: provider('unavailable', { provider: 'minimax' }),
       grok: provider('unavailable', { provider: 'grok' }),
       cursor: provider('unavailable', { provider: 'cursor' }),
-      zcode: provider('unavailable', { provider: 'zcode' })
+      zcode: provider('unavailable', { provider: 'zcode' }),
+      glm: null
     }
     expect(isUsageEmptyState(settledProviders, usageSettings())).toBe(true)
     expect(isUsageEmptyState({ ...settledProviders, zcode: undefined }, usageSettings())).toBe(true)

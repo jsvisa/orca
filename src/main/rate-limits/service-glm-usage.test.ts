@@ -53,6 +53,10 @@ vi.mock('./cursor-auth', () => ({
   readCursorAuthSession: vi.fn(async () => ({ status: 'missing' }))
 }))
 
+vi.mock('./zcode-usage-fetcher', () => ({
+  fetchZcodeRateLimits: vi.fn()
+}))
+
 vi.mock('./grok-auth', () => ({
   readGrokAuthSession: vi.fn(() => ({ status: 'missing' }))
 }))
